@@ -1,0 +1,31 @@
+#
+# Copyright (c) 2026 Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+#
+
+source "Kconfig.zephyr"
+
+mainmenu "Bluetooth: Mesh Provisioner"
+
+config MESH_PROVISIONER_SCAN_UUID_CACHE_MAX
+	int "Max unified provisioner cache entries"
+	default 50
+	range 1 128
+	help
+	  Maximum entries kept for UUID, address, GAP name, scan visibility, and
+	  auto-provision bookkeeping.
+
+config MESH_PROVISIONER_AUTO_RETRY_MS
+	int "Auto-provision retry interval in milliseconds"
+	default 500
+	range 0 60000
+	help
+	  Minimum spacing between repeated auto-provision attempts for the same UUID.
+
+config MESH_PROVISIONER_THREAD_STACK_SIZE
+	int "Provisioner thread stack size"
+	default 4096
+	help
+	  Stack size for the provisioner thread that drives bt_mesh_provision_adv()
+	  and node configuration.
