@@ -1,4 +1,5 @@
-*Similar to Bluetooth Mesh NLC: Dimming Control/Scene Selector sample.*
+**Similar to Bluetooth Mesh NLC: Dimming Control/Scene Selector sample.**
+
 https://docs.nordicsemi.com/bundle/ncs-latest/page/nrf/samples/bluetooth/mesh/light_dimmer/README.html#testing
 
 Checked on NCS 3.2.4
